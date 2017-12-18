@@ -1,5 +1,6 @@
 package com.kxky.demo.ui.tabtwo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,20 +11,21 @@ import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
 import com.aspsine.swipetoloadlayout.OnRefreshListener;
 import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.kxky.demo.R;
+import com.kxky.demo.bean.Title;
 import com.kxky.demo.ui.BaseFragment;
 import com.kxky.demo.ui.tabtwo.adapters.TestListAdapter;
 import com.kxky.demo.utils.NetworkUtil;
+import com.kxky.demo.utils.view.OnItemClickListener;
 
 
 /**
  * Created by kxky on 2017/12/13.
  */
 
-public class TabTwoFragment extends BaseFragment {
+public class TabTwoFragment extends BaseFragment implements OnItemClickListener {
     private RecyclerView recyclerView;
     private SwipeToLoadLayout swipeToLoadLayout;
     private int pageNum = 1;
-
 
     @Override
     public int getContentViewId() {
@@ -178,4 +180,14 @@ public class TabTwoFragment extends BaseFragment {
             swipeLayoutComplete();
         }*/
     }
+
+    @Override
+    public void onItemClick(View view, int position) {
+   /*      Title title = listData.get(position);
+           if (title != null) {
+           Intent intent = new Intent(this, EmergencyActivity.class);
+           intent.putExtra("taskcode", aidInfo.getTaskcode());
+           startActivity(intent);*/
+    }
+
 }
