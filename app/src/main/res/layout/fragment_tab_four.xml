@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/fragment_common_head_layout"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mTradeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/red"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/red"
+        app:tabTextColor="@color/text_max_color"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mTradeViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

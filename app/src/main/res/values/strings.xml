@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">kxky</string>
+
+    <string name="tab_one">one</string>
+    <string name="tab_two">two</string>
+    <string name="tab_three">three</string>
+    <string name="tab_four">four</string>
+    <string name="tab_five">five</string>
+</resources>

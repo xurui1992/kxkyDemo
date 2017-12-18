@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="tabNormal">#FFFFFF</color>
+    <color name="tabChoose">#FF4081</color>
+    <color name="background_color">#EEE8E5</color>
+    <color name="bottom_grey">#999999</color>
+    <color name="commom_bg_color">#f2f0f0</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_content">#ffa19d94</color>
+    <!--字体颜色-->
+    <color name="text_min_color">#999999</color>
+    <color name="text_medium_color">#666666</color>
+    <color name="text_max_color">#333333</color>
+    <color name="red">#F3323B</color>
+    <color name="white_pressed">#ffd5d5d5</color>
+    <color name="divide_line">#D8DDE4</color>
+    <color name="login_line">#cccccc</color>
+</resources>
