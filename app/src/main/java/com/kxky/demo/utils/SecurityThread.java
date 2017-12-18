@@ -57,7 +57,6 @@ public class SecurityThread extends Thread
                         String smsTimeString = lagTime + "秒";
                         textView.setText(smsTimeString);
                         textView.setTextColor(disenalbeColor);
-                        CMLog.e("11111111","...."+lagTime);
                     }
                 });
                 Thread.sleep(1000);

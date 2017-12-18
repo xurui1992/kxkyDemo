@@ -18,19 +18,12 @@
             android:id="@+id/swipe_refresh_header"
             layout="@layout/layout_twitter_header"/>
 
-        <!--   <android.support.v7.widget.RecyclerView
+          <android.support.v7.widget.RecyclerView
                android:id="@+id/swipe_target"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:scrollbars="vertical"
-               android:clipToPadding="false"/>-->
-
-        <TextView
-            android:id="@+id/swipe_target"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SwipeToLoadLayout"/>
-
+               android:clipToPadding="false"/>
         <include
             android:id="@+id/swipe_load_more_footer"
             layout="@layout/layout_classic_footer"/>

@@ -14,7 +14,6 @@ import com.kxky.demo.R;
 import com.kxky.demo.ui.BaseFragment;
 import com.kxky.demo.ui.main.LoginActivity;
 import com.kxky.demo.ui.main.SpinnerActivity;
-import com.kxky.demo.utils.CMLog;
 import com.kxky.demo.utils.SecurityThread;
 
 
@@ -108,7 +107,6 @@ public class TabFiveFragment extends BaseFragment {
         @Override
         public void onTick(long millisUntilFinished) {
             daojishi_two.setText("重新发送 " + "(" + millisUntilFinished / 1000 + ")");
-            CMLog.e(TAG, "...." + millisUntilFinished);
         }
 
         @Override

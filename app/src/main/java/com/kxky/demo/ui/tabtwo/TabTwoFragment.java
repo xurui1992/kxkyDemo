@@ -11,6 +11,7 @@ import com.aspsine.swipetoloadlayout.OnRefreshListener;
 import com.aspsine.swipetoloadlayout.SwipeToLoadLayout;
 import com.kxky.demo.R;
 import com.kxky.demo.ui.BaseFragment;
+import com.kxky.demo.ui.tabtwo.adapters.TestListAdapter;
 import com.kxky.demo.utils.NetworkUtil;
 
 
@@ -21,8 +22,9 @@ import com.kxky.demo.utils.NetworkUtil;
 public class TabTwoFragment extends BaseFragment {
     private RecyclerView recyclerView;
     private SwipeToLoadLayout swipeToLoadLayout;
-    private TextView mTextView;
     private int pageNum = 1;
+
+
     @Override
     public int getContentViewId() {
         return R.layout.fragment_tab_two;
@@ -32,18 +34,18 @@ public class TabTwoFragment extends BaseFragment {
     public void onViewInitialized(Bundle savedInstanceState) {
         initView();
         //开始加载，进入就刷新
-/*        swipeToLoadLayout.post(new Runnable() {
+        swipeToLoadLayout.post(new Runnable() {
             @Override
             public void run() {
                 swipeToLoadLayout.setRefreshing(true);
             }
-        });*/
+        });
     }
 
     private void initView() {
-        //    recyclerView = (RecyclerView) getActivity().findViewById(R.id.swipe_target);
-        mTextView = (TextView) getActivity().findViewById(R.id.swipe_target);
+        recyclerView = (RecyclerView) getActivity().findViewById(R.id.swipe_target);
         swipeToLoadLayout = (SwipeToLoadLayout) getActivity().findViewById(R.id.swipeToLoadLayout);
+
         swipeToLoadLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -79,7 +81,7 @@ public class TabTwoFragment extends BaseFragment {
     private void loadMore() {
         if (NetworkUtil.isNetworkAvailable(getActivity().getApplicationContext())) {
             loadMoreData();
-        } else{
+        } else {
             swipeLayoutComplete();
         }
     }
