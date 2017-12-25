@@ -6,4 +6,8 @@
     <string name="tab_three">three</string>
     <string name="tab_four">four</string>
     <string name="tab_five">five</string>
+
+    <string name="sure">确定</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="time_yesterday">昨天</string>
 </resources>

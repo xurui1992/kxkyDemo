@@ -58,4 +58,61 @@
         </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hui_cicle_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_time_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10"
+            android:text="2017-12-12 12:12:12"
+            android:textColor="@color/text_medium_color"
+            android:textSize="@dimen/space_12"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hui_cicle_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_time_two"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10"
+            android:text="2017-07-12 12:12:22"
+            android:textColor="@color/text_medium_color"
+            android:textSize="@dimen/space_12"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hui_cicle_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_time_three"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_10"
+            android:paddingRight="@dimen/space_10"
+            android:text="2017-12-12 12:12:12"
+            android:textColor="@color/text_medium_color"
+            android:textSize="@dimen/space_12"/>
+
+    </LinearLayout>
 </LinearLayout>
