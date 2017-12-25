@@ -14,6 +14,7 @@ import com.kxky.demo.R;
 import com.kxky.demo.ui.BaseFragment;
 import com.kxky.demo.ui.main.LoginActivity;
 import com.kxky.demo.ui.main.SpinnerActivity;
+import com.kxky.demo.ui.tabfive.activitys.ContactActivity;
 import com.kxky.demo.utils.SecurityThread;
 
 
@@ -27,7 +28,7 @@ public class TabFiveFragment extends BaseFragment {
     private Button mButtonSpinner;
     private Button daojishi_one;
     private Button daojishi_two;
-
+    private Button mPy;
 
     @Override
     public int getContentViewId() {
@@ -87,6 +88,15 @@ public class TabFiveFragment extends BaseFragment {
                         dialog.dismiss();
                     }
                 }).show();
+            }
+        });
+
+        mPy= (Button) getActivity().findViewById(R.id.py);
+        mPy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),ContactActivity.class);
+                startActivity(intent);
             }
         });
 

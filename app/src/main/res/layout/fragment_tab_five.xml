@@ -8,7 +8,11 @@
     <include
         layout="@layout/fragment_common_head_layout"
         />
-
+    <Button
+        android:id="@+id/py"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拼音"/>
     <Button
         android:id="@+id/button_spinner"
         android:layout_width="match_parent"
