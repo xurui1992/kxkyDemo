@@ -36,6 +36,20 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         splash_image = (ImageView) findViewById(R.id.splash_image);
         isFirstIn = new SharePref(mContext).getIsFrist();
+
+        /**
+         * 防止安装完直接点击进入后，在回到桌面进入再次出现闪屏页面
+         * isTaskRoot()方法是用来判断当前Activity是否是第一个activity
+         */
+        if (!isTaskRoot()) {
+            Intent intent = getIntent();
+            String action = intent.getAction();
+            if (intent.hasCategory(Intent.CATEGORY_LAUNCHER) && action != null && action.equals(Intent.ACTION_MAIN)) {
+                finish();
+                return;
+            }
+        }
+
         initData();
     }
 
@@ -44,7 +58,7 @@ public class SplashActivity extends BaseActivity {
      */
     private void initData() {
         showHeadContanier(View.GONE);
-    //    isFirstIn = new SharePref(mContext).getIsFrist();
+        isFirstIn = new SharePref(mContext).getIsFrist();
         toAntherActivity();
     }
 
@@ -56,11 +70,14 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 Intent intent = null;
-                if (isFirstIn)//isFirst ==true 为第一次登录
+                /**
+                 * isFirst ==true 为第一次登录
+                 * 判断是否需要进入引导页
+                 */
+                if (isFirstIn)
                 {
                     CMLog.e(TAG,"first");
-                    intent = new Intent(mContext, MainActivity.class);
-                    //   intent = new Intent(mContext, GuidePagerActivity.class);
+                      intent = new Intent(mContext, GuidePagerActivity.class);
                 } else {
                     CMLog.e(TAG,"no_first");
                     intent = new Intent(mContext, MainActivity.class);

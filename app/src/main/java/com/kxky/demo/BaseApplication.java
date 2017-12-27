@@ -5,8 +5,10 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 
+import com.kxky.demo.http.RetrofitService;
 import com.kxky.demo.ui.BaseActivity;
 import com.kxky.demo.utils.CMLog;
+import com.kxky.demo.utils.SharePref;
 
 import java.util.Stack;
 
@@ -58,6 +60,8 @@ public class BaseApplication extends Application {
         /**
          * 初始化 比如友盟，极光，分享等
          */
+        /**初始化网络请求模块*/
+        RetrofitService.getInstance().init(this);
 
         ActivityManager activityManager = (ActivityManager) getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
         int memClass = activityManager.getMemoryClass();//64，以m为单位
@@ -94,6 +98,8 @@ public class BaseApplication extends Application {
      */
     public void logout(Context context) {
         clearAllActivities();
+        SharePref pref = new SharePref(context);
+        pref.putIsFrist();
     }
 
     /**
